@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import {
   Palette,
   Image,
@@ -11,47 +13,47 @@ const thumbnails = [
   {
     title: "Guilhy - VOD #3",
     image:
-      "/projects/thumb-guili-1.png",
+      `${import.meta.env.BASE_URL}projects/thumb-guili-1.png`,
   },
   {
     title: "Guilhy - VOD #5",
     image:
-      "/projects/guili-2.png",
+      `${import.meta.env.BASE_URL}projects/guili-2.png`,
   },
   {
     title: "Guilhy - VOD #6",
     image:
-      "/projects/guili-3.png",
+      `${import.meta.env.BASE_URL}projects/guili-3.png`,
   },
   {
     title: "Guilhy - VOD #7",
     image:
-      "/projects/guili-4.png",
+      `${import.meta.env.BASE_URL}projects/guili-4.png`,
   },
   {
     title: "Guilhy - Arknight Endfield - Solo, No Hit",
     image:
-      "/projects/guili-5.png",
+      `${import.meta.env.BASE_URL}projects/guili-5.png`,
   },
   {
     title: "GoodGuyAdel - Mano Truta's Adventures",
     image:
-      "/projects/mano-truta-adventures1.jpg",
+      `${import.meta.env.BASE_URL}projects/mano-truta-adventures1.jpg`,
   },
   {
     title: "GoodGuyAdel - Chun-li Combo Trials",
     image:
-      "/projects/Chun-li-combo-trials.png",
+      `${import.meta.env.BASE_URL}projects/Chun-li-combo-trials.png`,
   },
   {
     title: "GoodGuyAdel - Resident Evil 4",
     image:
-      "/projects/capa-re4.png",
+      `${import.meta.env.BASE_URL}projects/capa-re4.png`,
   },
   {
     title: "GoodGuyAdel - Resident Evil 5 Co-op",
     image:
-      "/projects/Resident-Evil-5.png",
+      `${import.meta.env.BASE_URL}projects/Resident-Evil-5.png`,
   },
 
 ];
@@ -60,12 +62,12 @@ const overlays = [
   {
     title: "Arcade Intro + Ranking with StreamElements API",
     image:
-      "/projects/0607(1).gif",
+      `${import.meta.env.BASE_URL}projects/0607(1).gif`,
   },
   {
     title: "Placar no TSH",
     image:
-      "/projects/0607.gif",
+      `${import.meta.env.BASE_URL}projects/0607.gif`,
   },
 ];
 
@@ -73,17 +75,17 @@ const socials = [
   {
     title: "GoodGuyAdel - Twitch",
     image:
-      "/projects/background-stream.png",
+      `${import.meta.env.BASE_URL}projects/background-stream.png`,
   },
   {
     title: "Guilhy - Youtube",
     image:
-      "/projects/guili-ytb.png",
+      `${import.meta.env.BASE_URL}projects/guili-ytb.png`,
   },
   {
     title: "Augusto Rafael - Youtube",
     image:
-      "/projects/augusto-canal-banner.png",
+      `${import.meta.env.BASE_URL}projects/augusto-canal-banner.png`,
   },
 ];
 
@@ -91,17 +93,17 @@ const flyers = [
   {
     title: "Guilhy - Tekken Tag 2 F7",
     image:
-      "/projects/ft7.png",
+      `${import.meta.env.BASE_URL}projects/ft7.png`,
   },
   {
     title: "SolarFlash - Campanha de Indicação",
     image:
-      "/projects/Solarflash - Campanha de Indicação.png",
+      `${import.meta.env.BASE_URL}projects/Solarflash - Campanha de Indicação.png`,
   },
   {
     title: "Diana - Costura",
     image:
-      "/projects/Cópia de Costuras da Di (1).png",
+      `${import.meta.env.BASE_URL}projects/Cópia de Costuras da Di (1).png`,
   },
 ];
 
@@ -139,76 +141,70 @@ export default function DesignerPortfolio() {
         <div className="max-w-[1500px] mx-auto px-8 h-24 flex items-center justify-between">
 
           {/* LOGO */}
-          <a href="/designer">
+          <Link to="/designer">
             <img
-              src="/projects/logo.png"
+              src={`${import.meta.env.BASE_URL}projects/logo.png`}
               alt="Kaue"
-              className="h-12 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
-          </a>
+          </Link>
 
           {/* MENU */}
-          <nav className="hidden md:flex items-center gap-12">
-            <a
-              href="#inicio"
+          <nav className="hidden lg:flex items-center gap-12">
+            <HashLink smooth to="#inicio"
               className="text-white/70 hover:text-[#0083E4] transition"
             >
               Início
-            </a>
+            </HashLink>
 
-            <a
-              href="#servicos"
+            <HashLink smooth to="#servicos"
               className="text-white/70 hover:text-[#0083E4] transition"
             >
               Serviços
-            </a>
+            </HashLink>
 
-            <a
-              href="#thumbnails"
+            <HashLink smooth to="#thumbnails"
               className="text-white/70 hover:text-[#0083E4] transition"
             >
               Thumbnails
-            </a>
+            </HashLink>
 
-            <a
-              href="#overlays"
+            <HashLink smooth to="#overlays"
               className="text-white/70 hover:text-[#0083E4] transition"
             >
               Overlays
-            </a>
+            </HashLink>
 
-            <a
-              href="#social-media"
+            <HashLink smooth to="#social-media"
               className="text-white/70 hover:text-[#0083E4] transition"
             >
               Capas
-            </a>
+            </HashLink>
 
-            <a
-              href="#flyers"
+            <HashLink smooth to="#flyers"
               className="text-white/70 hover:text-[#0083E4] transition"
             >
               Flyers
-            </a>
+            </HashLink>
 
-            <a
-              href="#contato"
+            <HashLink smooth to="#contato"
               className="text-white/70 hover:text-[#0083E4] transition"
             >
               Contato
-            </a>
+            </HashLink>
           </nav>
 
           {/* VOLTAR PARA DEV */}
-          <a
-            href="/"
+          <Link
+            to="/"
             className="
-              hidden
-              md:flex
+              flex
               items-center
               justify-center
-              w-14
-              h-14
+              w-12
+              h-12
+              md:w-14
+              md:h-14
               rounded-full
               border
               text-white
@@ -220,20 +216,21 @@ export default function DesignerPortfolio() {
               hover:border-[#0083E4]
               transition
               duration-300
-              text-2xl
+              text-xl
+              md:text-2xl
             "
           >
             {"</>"}
-          </a>
+          </Link>
 
         </div>
       </header>
       <main className="bg-black text-white min-h-screen overflow-hidden">
         {/* HERO */}
-        <section id="inicio" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+        <section id="inicio" className=" relative min-h-screen flex items-center justify-center px-5 md:px-6 overflow-hidden">
 
           <img
-            src="/projects/background-pasta.png"
+            src={`${import.meta.env.BASE_URL}projects/background-pasta.png`}
             alt=""
             className="
             absolute
@@ -273,24 +270,22 @@ export default function DesignerPortfolio() {
               Design para Web
             </span>
 
-            <h1 className="text-6xl md:text-8xl font-black mt-6 leading-none">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mt-6 leading-none">
               Adel's
               <br />
               <span className="text-[#0083E4]">Desing Hub</span>
             </h1>
 
-            <p className="max-w-2xl mx-auto mt-8 text-zinc-400 text-lg">
+            <p className="max-w-2xl mx-auto mt-6 text-zinc-400 text-base md:text-lg">
               Logos, overlays, thumbnails, banners e identidades visuais
               desenvolvidas para streamers, comunidades e projetos do universo
               gamer.
             </p>
 
-            <div className="flex gap-4 justify-center mt-10">
-              <a
-                href="#thumbnails"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <HashLink smooth to="#thumbnails"
                 className="
-                  px-8
-                  py-4
+                  px-6 md:px-8 py-4
                   bg-[#0083E4]
                   hover:bg-[#0097ff]
                   transition
@@ -301,13 +296,11 @@ export default function DesignerPortfolio() {
                 "
               >
                 Ver Trabalhos
-              </a>
+              </HashLink>
 
-              <a
-                href="#contato"
+              <HashLink smooth to="#contato"
                 className="
-                  px-8
-                  py-4
+                  px-6 md:px-8 py-4
                   border
                   border-zinc-700
                   hover:border-[#0083E4]
@@ -319,7 +312,7 @@ export default function DesignerPortfolio() {
                 "
               >
                 Entrar em Contato
-              </a>
+              </HashLink>
             </div>
           </motion.div>
         </section>
@@ -327,7 +320,7 @@ export default function DesignerPortfolio() {
         {/* SERVIÇOS */}
         <section id="servicos" className="py-32 px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-black mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-12 md:mb-16">
               O que eu <span className="text-[#0083E4]">crio</span>
             </h2>
 
@@ -339,7 +332,7 @@ export default function DesignerPortfolio() {
                   <motion.div
                     key={index}
                     whileHover={{ y: -8 }}
-                    className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8"
+                    className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8"
                   >
                     <Icon size={40} className="text-[#0083E4] mb-5" />
 
@@ -360,7 +353,7 @@ export default function DesignerPortfolio() {
         {/* THUMBNAILS */}
         <section id="thumbnails" className="py-32 px-6 bg-zinc-950">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-black mb-4">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
               Thumbnails
             </h2>
 
@@ -368,7 +361,7 @@ export default function DesignerPortfolio() {
               Miniaturas para YouTube, Twitch e Shorts.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
               {thumbnails.map((item, index) => (
                 <motion.div
                   key={index}
@@ -378,7 +371,7 @@ export default function DesignerPortfolio() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-[280px] object-cover"
+                    className="w-full h-[220px] md:h-[280px] object-cover"
                   />
 
                   <div className="p-5">
@@ -395,7 +388,7 @@ export default function DesignerPortfolio() {
         {/* OVERLAYS */}
         <section id="overlays" className="py-32 px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-black mb-4">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
               Overlays OBS
             </h2>
 
@@ -421,7 +414,7 @@ export default function DesignerPortfolio() {
                   />
 
                   <div className="p-6">
-                    <h3 className="font-bold text-2xl">
+                    <h3 className="font-bold text-xl md:text-2xl">
                       {item.title}
                     </h3>
                   </div>
@@ -434,7 +427,7 @@ export default function DesignerPortfolio() {
         {/* REDES SOCIAIS */}
         <section id="social-media" className="py-32 px-6 bg-zinc-950">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-black mb-4">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
               Capas para Redes Sociais
             </h2>
 
@@ -442,7 +435,7 @@ export default function DesignerPortfolio() {
               Twitch, YouTube, Discord e X.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
               {socials.map((item, index) => (
                 <motion.div
                   key={index}
@@ -469,7 +462,7 @@ export default function DesignerPortfolio() {
         {/* FLYERS */}
         <section id="flyers" className="py-32 px-6">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl font-black mb-4">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
               Flyers & Eventos
             </h2>
 
@@ -487,7 +480,7 @@ export default function DesignerPortfolio() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-[500px] object-cover"
+                    className="w-full h-[350px] md:h-[500px] object-cover"
                   />
 
                   <div className="p-5">
@@ -504,11 +497,11 @@ export default function DesignerPortfolio() {
         {/* PROCESSO */}
         <section className="py-32 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl font-black text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-center mb-20">
               Processo Criativo
             </h2>
 
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 "Briefing",
                 "Pesquisa",
@@ -517,9 +510,9 @@ export default function DesignerPortfolio() {
               ].map((step, index) => (
                 <div
                   key={index}
-                  className="text-center border border-zinc-800 rounded-2xl p-8"
+                  className="text-center border border-zinc-800 rounded-2xl p-6 md:p-8"
                 >
-                  <div className="text-[#0083E4] text-5xl font-black mb-4">
+                  <div className="text-[#0083E4] text-4xl md:text-5xl font-black mb-4">
                     0{index + 1}
                   </div>
 
@@ -535,25 +528,26 @@ export default function DesignerPortfolio() {
         {/* CTA */}
         <section id="contato" className="py-32 px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-6xl font-black">
+            <h2 className="text-4xl md:text-6xl font-black leading-tight">
               Vamos criar algo
               <span className="text-[#0083E4]"> incrível?</span>
             </h2>
 
-            <p className="text-zinc-400 mt-6 text-lg">
+            <p className="text-zinc-400 mt-6 text-base md:text-lg">
               Disponível para projetos de branding, overlays, thumbnails,
               banners e identidades visuais para criadores de conteúdo.
             </p>
 
             <a
-              href="mailto:kaue.dartora@gmail.com"
+              href="https://wa.me/5551982623732"
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 mt-10
                 inline-flex
                 items-center
                 gap-3
-                px-8
-                py-4
+                px-6 md:px-8 py-4
                 bg-[#0083E4]
                 rounded-xl
                 font-bold

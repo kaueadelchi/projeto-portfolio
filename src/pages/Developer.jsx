@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import {
   FaGithub,
   FaLinkedinIn,
@@ -77,7 +79,7 @@ export default function App() {
       description:
         "InDocs.AI é uma plataforma de inteligência artificial que transforma contratos e documentos jurídicos em dados estruturados, automatizando análises, extração de informações e respostas rápidas para equipes jurídicas.",
 
-      image: "/projects/indocs-ai.png",
+      image: `${import.meta.env.BASE_URL}projects/indocs-ai.png`,
 
       link:
         "https://indocs.ai/",
@@ -90,7 +92,7 @@ export default function App() {
       description:
         "Iniciativa estratégica que impulsiona o crescimento, a inovação e a prosperidade do cooperativismo gaúcho.",
 
-      image: "/projects/rscoop15.webp",
+      image: `${import.meta.env.BASE_URL}projects/rscoop15.webp`,
 
       link:
         "https://www.behance.net/gallery/222592133/RSCOOP15",
@@ -103,7 +105,7 @@ export default function App() {
       description:
         "O Instituto Abílio Pontes promove inclusão social, fortalecimento familiar e apoio a comunidades em situação de vulnerabilidade por meio de ações sociais, educacionais e de saúde.",
 
-      image: "/projects/abilio-pontes.webp",
+      image: `${import.meta.env.BASE_URL}projects/abilio-pontes.webp`,
 
       link:
         "https://www.behance.net/gallery/222583439/Instituto-Abilio-Pontes",
@@ -116,7 +118,7 @@ export default function App() {
       description:
         "A ASBENFAM promove o desenvolvimento social de crianças e famílias em situação de vulnerabilidade, por meio de ações educacionais, culturais e de inclusão social.",
 
-      image: "/projects/asbenfam.webp",
+      image: `${import.meta.env.BASE_URL}projects/asbenfam.webp`,
 
       link:
         "https://www.behance.net/gallery/222583363/ASBENFAM",
@@ -129,7 +131,7 @@ export default function App() {
       description:
         "E-Commerce com visual delicado e moderno.",
 
-      image: "/projects/doce-mimos.webp",
+      image: `${import.meta.env.BASE_URL}projects/doce-mimos.webp`,
 
       link:
         "https://www.behance.net/gallery/222582571/Doce-Mimos",
@@ -142,7 +144,7 @@ export default function App() {
       description:
         "O Grupo Família na Mesa fortalece laços familiares e comunitários por meio de encontros, acolhimento, valores humanos e desenvolvimento social.",
 
-      image: "/projects/familia-na-mesa.webp",
+      image: `${import.meta.env.BASE_URL}projects/familia-na-mesa.webp`,
 
       link:
         "https://www.behance.net/gallery/222582551/Familia-na-Mesa",
@@ -155,7 +157,7 @@ export default function App() {
       description:
         "O Instituto Agrosolar promove inovação, sustentabilidade e desenvolvimento rural por meio de soluções sociais, agrícolas e energias renováveis para comunidades do campo.",
 
-      image: "/projects/instituto-agrosolar.webp",
+      image: `${import.meta.env.BASE_URL}projects/instituto-agrosolar.webp`,
 
       link:
         "https://www.behance.net/gallery/222582179/Instituto-Agrosolar",
@@ -188,40 +190,41 @@ export default function App() {
           </h1>
 
           {/* MENU */}
-          <nav className="hidden md:flex items-center gap-12">
-            <a href="#inicio" className="text-white/70 hover:text-white transition">
+          <nav className="hidden lg:flex items-center gap-12">
+            <HashLink smooth to="#inicio" className="text-white/70 hover:text-white transition">
               Início
-            </a>
+            </HashLink>
 
-            <a href="#sobre" className="text-white/70 hover:text-white transition">
+            <HashLink smooth to="#sobre" className="text-white/70 hover:text-white transition">
               Sobre
-            </a>
+            </HashLink>
 
-            <a href="#skills" className="text-white/70 hover:text-white transition">
+            <HashLink smooth to="#skills" className="text-white/70 hover:text-white transition">
               Skills
-            </a>
+            </HashLink>
 
-            <a href="#projetos" className="text-white/70 hover:text-white transition">
+            <HashLink smooth to="#projetos" className="text-white/70 hover:text-white transition">
               Projetos
-            </a>
+            </HashLink>
 
-            <a href="#contato" className="text-white/70 hover:text-white transition">
+            <HashLink smooth to="#contato" className="text-white/70 hover:text-white transition">
               Contato
-            </a>
+            </HashLink>
           </nav>
 
           {/* BUTTON */}
-          <a
-            href="/designer"
+          <Link
+            to="/designer"
             target="_blank"
             rel="noopener noreferrer"
             className="
-              hidden
-              md:flex
+              flex
               items-center
               justify-center
-              w-14
-              h-14
+              w-12
+              h-12
+              md:w-14
+              md:h-14
               rounded-full
               border
               border-white/10
@@ -231,63 +234,69 @@ export default function App() {
               hover:border-[#1559db]
               transition
               duration-300
-              text-2xl
+              text-xl
+              md:text-2xl
             "
           >
             <HiOutlineColorSwatch />
-          </a>
+          </Link>
         </div>
       </header>
 
       {/* HERO */}
       <section
         id="inicio"
-        className="min-h-screen pt-32 px-8 flex items-center overflow-hidden"
+        className="
+          min-h-screen
+          pt-28 md:pt-32
+          px-5 md:px-8
+          flex
+          items-center
+          overflow-hidden
+        "
       >
-        <div className="max-w-[1500px] mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center w-full">
+        <div className="max-w-[1500px] mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-10 items-center w-full">
           {/* LEFT */}
           <div className="relative z-10">
             {/* SMALL TEXT */}
-            <span className="text-[#db9614] uppercase tracking-[0.35em] text-sm font-semibold">
+            <span className="text-[#db9614] uppercase tracking-[0.25em] text-xs md:text-sm font-semibold">
               Desenvolvedor Web & UI Designer
             </span>
 
             {/* TITLE */}
             <h2 className="mt-8 leading-[0.9]">
-              <span className="block text-[80px] xl:text-[110px] font-black text-white">
+              <span className="block text-[52px] sm:text-[70px] xl:text-[110px] font-black text-white">
                 Criando
               </span>
 
-              <span className="block text-[80px] xl:text-[110px] font-black text-[#1559db]">
+              <span className="block text-[52px] sm:text-[70px] xl:text-[110px] font-black text-[#1559db]">
                 Experiências
               </span>
             </h2>
 
             {/* DESCRIPTION */}
-            <p className="mt-10 text-white/60 text-xl leading-relaxed max-w-[620px]">
+            <p className="mt-8 text-white/60 text-base md:text-xl leading-relaxed max-w-[620px]">
               Desenvolvimento de aplicações modernas, interfaces premium e
               experiências digitais focadas em performance, design e usabilidade.
             </p>
 
             {/* BUTTONS */}
-            <div className="flex flex-wrap gap-5 mt-14">
-              <a
-                href="#projetos"
-                className="px-10 py-5 rounded-full bg-[#1559db] hover:bg-[#0f47b3] transition text-lg font-medium shadow-2xl shadow-blue-500/20 inline-flex items-center justify-center"
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <HashLink smooth to="#projetos"
+                className="px-8 py-4 md:px-10 md:py-5 rounded-full bg-[#1559db] hover:bg-[#0f47b3] transition text-lg font-medium shadow-2xl shadow-blue-500/20 inline-flex items-center justify-center"
               >
                 Ver Projetos
-              </a>
+              </HashLink>
 
-              <a
-                href="#sobre"
-                className="px-10 py-5 rounded-full border border-white/10 hover:border-[#db9614] hover:text-[#db9614] transition text-lg font-medium inline-flex items-center justify-center"
+              <HashLink smooth to="#sobre"
+                className="px-8 py-4 md:px-10 md:py-5 rounded-full border border-white/10 hover:border-[#db9614] hover:text-[#db9614] transition text-lg font-medium inline-flex items-center justify-center"
               >
                 Sobre Mim
-              </a>
+              </HashLink>
             </div>
 
             {/* SOCIAL */}
-            <div className="flex items-center gap-6 mt-16">
+            <div className="flex items-center gap-4 mt-10 md:mt-16">
               <a
                 href="https://github.com/kaueadelchi"
                 target="_blank"
@@ -331,9 +340,9 @@ export default function App() {
               <div className="absolute inset-0 border border-white/10 rounded-[40px] rotate-6 scale-[1.02]"></div>
 
               {/* IMAGE */}
-              <div className="relative w-[480px] h-[580px] rounded-[40px] overflow-hidden border border-white/10 bg-[#0d1729]">
+              <div className="relative w-[320px] h-[420px] sm:w-[420px] sm:h-[520px] lg:w-[480px] lg:h-[580px] rounded-[40px] overflow-hidden border border-white/10 bg-[#0d1729]">
                 <img
-                  src="/kaue-2.jpeg"
+                  src={`${import.meta.env.BASE_URL}kaue-2.jpeg`}
                   alt="Kaue"
                   className="
                     w-full
@@ -357,34 +366,18 @@ export default function App() {
                     Desenvolvedor Full Stack
                   </span>
 
-                  <h3 className="text-5xl font-black mt-3 leading-none">
+                  <h3 className="text-3xl md:text-5xl font-black mt-3 leading-none">
                     Kaue Dartora
                   </h3>
 
-                  <p className="text-white/60 mt-4 text-lg">
+                  <p className="text-white/60 mt-3 text-sm md:text-lg">
                     React • Next.js • UI/UX • Node.js
                   </p>
                 </div>
               </div>
 
               {/* EXPERIENCE CARD */}
-              <div
-                className="
-                  absolute
-                  -right-10
-                  top-20
-                  bg-[#0d1729]/95
-                  backdrop-blur-xl
-                  border
-                  border-white/10
-                  rounded-3xl
-                  px-6
-                  py-5
-                  shadow-2xl
-                  z-20
-                  w-[200px]
-                "
-              >
+              <div className=" absolute -right-6 -top-10 md:-right-16 md:-top-4 bg-[#0d1729]/95 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-5 shadow-2xl z-20 w-[150px] md:w-[200px]">
                 <span className="text-[#db9614] uppercase tracking-[0.3em] text-[10px]">
                   Experiência
                 </span>
@@ -414,11 +407,11 @@ export default function App() {
               Sobre Mim
             </span>
 
-            <h2 className="text-6xl md:text-7xl font-black mt-8 leading-[1]">
+            <h2 className="text-4xl md:text-7xl font-black mt-8 leading-[1]">
               Desenvolvendo experiências digitais com design e performance.
             </h2>
 
-            <p className="mt-10 text-white/60 text-xl leading-relaxed max-w-[800px]">
+            <p className="mt-8 text-white/60 text-base md:text-xl leading-relaxed max-w-[800px]">
               Sou desenvolvedor web e designer focado na criação de interfaces
               modernas, experiências premium e aplicações escaláveis com foco
               em performance, estética e usabilidade.
@@ -428,12 +421,12 @@ export default function App() {
           {/* GRID */}
           <div className="grid lg:grid-cols-3 gap-8 mt-24">
             {/* CARD 1 */}
-            <div className="bg-white/5 border border-white/10 rounded-[40px] p-10 backdrop-blur-xl hover:border-[#1559db] transition duration-500">
+            <div className="bg-white/5 border border-white/10 rounded-[40px] p-6 md:p-10 backdrop-blur-xl hover:border-[#1559db] transition duration-500">
               <span className="text-[#db9614] uppercase tracking-[0.3em] text-xs">
                 Experiência
               </span>
 
-              <h3 className="text-7xl font-black mt-6 text-[#1559db]">
+              <h3 className="text-5xl md:text-7xl font-black mt-6 text-[#1559db]">
                 5+
               </h3>
 
@@ -443,7 +436,7 @@ export default function App() {
             </div>
 
             {/* CARD 2 */}
-            <div className="bg-[#1559db] rounded-[40px] p-10 relative overflow-hidden">
+            <div className="bg-[#1559db] rounded-[40px] p-6 md:p-10 relative overflow-hidden">
               {/* BG */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1559db] to-[#0d1729] opacity-80"></div>
 
@@ -478,12 +471,12 @@ export default function App() {
             </div>
 
             {/* CARD 3 */}
-            <div className="bg-white/5 border border-white/10 rounded-[40px] p-10 backdrop-blur-xl hover:border-[#db9614] transition duration-500">
+            <div className="bg-white/5 border border-white/10 rounded-[40px] p-6 md:p-10 backdrop-blur-xl hover:border-[#db9614] transition duration-500">
               <span className="text-[#db9614] uppercase tracking-[0.3em] text-xs">
                 Projetos
               </span>
 
-              <h3 className="text-7xl font-black mt-6 text-[#db9614]">
+              <h3 className="text-5xl md:text-7xl font-black mt-6 text-[#db9614]">
                 20+
               </h3>
 
@@ -519,7 +512,7 @@ export default function App() {
             Skills
           </span>
 
-          <h2 className="text-6xl font-black mt-8">
+          <h2 className="text-4xl md:text-6xl font-black mt-8">
             Tecnologias & Ferramentas
           </h2>
 
@@ -527,13 +520,13 @@ export default function App() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-3xl p-10 hover:border-[#1559db] hover:-translate-y-2 transition duration-300 group backdrop-blur-xl"
+                className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 hover:border-[#1559db] hover:-translate-y-2 transition duration-300 group backdrop-blur-xl"
               >
-                <div className="text-6xl text-[#1559db] group-hover:text-[#db9614] transition duration-300">
+                <div className="text-5xl md:text-6xl text-[#1559db] group-hover:text-[#db9614] transition duration-300">
                   {skill.icon}
                 </div>
 
-                <h3 className="text-3xl font-bold mt-8">
+                <h3 className="text-2xl md:text-3xl font-bold mt-8">
                   {skill.name}
                 </h3>
               </div>
@@ -549,7 +542,7 @@ export default function App() {
             Projetos
           </span>
 
-          <h2 className="text-6xl font-black mt-8">
+          <h2 className="text-4xl md:text-6xl font-black mt-8">
             Trabalhos em Destaque
           </h2>
 
@@ -583,11 +576,11 @@ export default function App() {
 
                 {/* CONTENT */}
                 <div className="p-7">
-                  <h3 className="text-3xl font-black group-hover:text-[#1559db] transition leading-tight">
+                  <h3 className="text-2xl md:text-3xl font-black group-hover:text-[#1559db] transition leading-tight">
                     {project.title}
                   </h3>
 
-                  <p className="text-white/60 text-base leading-relaxed mt-5">
+                  <p className="text-white/60 text-sm md:text-base leading-relaxed mt-5">
                     {project.description}
                   </p>
 
@@ -612,18 +605,20 @@ export default function App() {
             Contato
           </span>
 
-          <h2 className="text-7xl font-black mt-8 leading-tight">
+          <h2 className="text-4xl md:text-7xl font-black mt-8 leading-tight">
             Vamos criar algo incrível juntos?
           </h2>
 
-          <p className="text-white/60 text-xl leading-relaxed mt-10 max-w-[700px] mx-auto">
+          <p className="text-white/60 text-base md:text-xl leading-relaxed mt-10 max-w-[700px] mx-auto">
             Disponível para projetos freelance, desenvolvimento web,
             UI/UX Design e criação de experiências digitais modernas.
           </p>
 
           <a
-            href="mailto:kaue.dartora@gmail.com"
-            className="mt-14 px-12 py-6 rounded-full bg-[#1559db] hover:bg-[#0f47b3] transition text-xl font-semibold shadow-2xl shadow-blue-500/20 inline-flex items-center justify-center"
+            href="https://wa.me/5551982623732"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-10 md:mt-14 px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full bg-[#1559db] hover:bg-[#0f47b3] transition  font-semibold shadow-2xl shadow-blue-500/20 inline-flex items-center justify-center"
           >
             Entrar em Contato
           </a>
