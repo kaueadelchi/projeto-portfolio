@@ -28,8 +28,8 @@ export default function TopographicLines() {
             x - canvas.width / 2,
             y - canvas.height / 2
           ) *
-            0.01 -
-            t
+          0.01 -
+          t
         )
       );
     }
@@ -127,12 +127,15 @@ export default function TopographicLines() {
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+      // fundo escuro
+      ctx.fillStyle = "#543b73";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
       for (let l = -2.2; l <= 2.2; l += 0.18) {
         const centerDist = Math.abs(l) / 2.2;
 
-        ctx.strokeStyle = `rgba(126,128,124,${
-          0.08 + (1 - centerDist) * 0.12
-        })`;
+        ctx.strokeStyle = `rgba(255,255,255,${0.08 + (1 - centerDist) * 0.12
+          })`;
 
         ctx.lineWidth =
           Math.round(l * 10) % 5 === 0 ? 1.4 : 1;
