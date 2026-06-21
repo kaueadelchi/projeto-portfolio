@@ -10,7 +10,7 @@ function App() {
             <img
                 src={`${import.meta.env.BASE_URL}projects/guili-dance.gif`}
                 alt=""
-                className="absolute top-8 left-8 w-32 h-32 object-contain"
+                className="absolute top-8 left-8 w-32 h-32 object-contain scale-x-[-1]"
             />
 
             {/* GIF Superior Direito */}
@@ -24,21 +24,28 @@ function App() {
             <img
                 src={`${import.meta.env.BASE_URL}projects/guili-dance.gif`}
                 alt=""
-                className="absolute bottom-8 left-8 w-32 h-32 object-contain"
+                className="absolute bottom-8 left-8 w-32 h-32 object-contain scale-y-[-1] scale-x-[-1]"
             />
 
             {/* GIF Inferior Direito */}
             <img
                 src={`${import.meta.env.BASE_URL}projects/guili-dance.gif`}
                 alt=""
-                className="absolute bottom-8 right-8 w-32 h-32 object-contain"
+                className="absolute bottom-8 right-8 w-32 h-32 object-contain scale-y-[-1]"
             />
 
             {/* Texto central */}
             <div className="absolute inset-0 flex items-center justify-center gap-1 pointer-events-none">
+
+                <img
+                    src={`${import.meta.env.BASE_URL}projects/reina.gif`}
+                    alt=""
+                    className="w-32 h-32 object-contain"
+                />
+
                 <h1
                     className="
-                    text-[#313739]
+                    text-[#fff]
                     text-6xl
                     font-bold
                     uppercase
@@ -50,7 +57,7 @@ function App() {
                 </h1>
 
                 <img
-                    src={`${import.meta.env.BASE_URL}projects/guilhi-andando.gif`}
+                    src={`${import.meta.env.BASE_URL}projects/reina.gif`}
                     alt=""
                     className="w-32 h-32 object-contain scale-x-[-1]"
                 />
