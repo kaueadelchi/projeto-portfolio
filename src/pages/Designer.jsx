@@ -273,7 +273,7 @@ export default function DesignerPortfolio() {
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mt-6 leading-none">
               Adel's
               <br />
-              <span className="text-[#0083E4]">Desing Hub</span>
+              <span className="text-[#0083E4]">Design Hub</span>
             </h1>
 
             <p className="max-w-2xl mx-auto mt-6 text-zinc-400 text-base md:text-lg">
